@@ -10,12 +10,13 @@
 const descendingOrder = (num) => {
   return num < 0
     ? undefined
-    : num
-        .toString()
-        .split("")
-        .map((n) => Number(n))
-        .sort((a, b) => a - b)
-        .join("");
+    : Number(
+        num
+          .toString()
+          .split("")
+          .sort((a, b) => b - a)
+          .join("")
+      );
 };
 
-console.log(descendingOrder(584716234));
+console.log(descendingOrder(0));
