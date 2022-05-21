@@ -64,15 +64,13 @@ console.log(spacify("hello world"));
 function dontGiveMeFive(start, end) {
   const array = [start, end];
 
-  while (start < end-1) {
+  while (start < end - 1) {
     start++;
 
     array.push(start);
   }
 
-  return (
-    array.filter((ele) => !ele.toString().includes("5")).length
-  );
+  return array.filter((ele) => !ele.toString().includes("5")).length;
 }
 //*2
 // function dontGiveMeFive(start, end) {
@@ -91,7 +89,7 @@ function dontGiveMeFive(start, end) {
 //   }
 //   return res.length;
 // }
-console.log(dontGiveMeFive(1,9));
+console.log(dontGiveMeFive(1, 9));
 
 // !--------------------------------
 // Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
@@ -102,9 +100,29 @@ console.log(dontGiveMeFive(1,9));
 // solution(null); // should return []
 
 function solution(nums) {
-  return nums === null ? [] : nums.sort((a, b) => a -b);
+  return nums === null ? [] : nums.sort((a, b) => a - b);
 }
 function solution(nums) {
   return nums !== null ? nums.sort((a, b) => a - b) : [];
 }
 console.log(solution([1, 2, 10, 50, 5]));
+
+// !--------------------------------------------
+// Given a varying number of integer arguments, return the digits that are not present in any of them.
+
+// Example:
+
+// [12, 34, 56, 78]  =>  "09"
+// [2015, 8, 26]     =>  "3479"
+
+function unusedDigits(arr) {
+  const nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  arr = arr.join("");
+
+  return nums
+    .map((num) => !arr.includes(num) && num)
+    .filter((num) => true && num)
+    .join("");
+}
+
+console.log(unusedDigits([2015, 8, 26]));
