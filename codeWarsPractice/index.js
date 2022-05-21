@@ -115,8 +115,8 @@ console.log(solution([1, 2, 10, 50, 5]));
 // [12, 34, 56, 78]  =>  "09"
 // [2015, 8, 26]     =>  "3479"
 
-function unusedDigits(arr) {
-  const nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+function unusedDigits(...arr) {
+  const nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   arr = arr.join("");
 
   return nums
@@ -125,4 +125,4 @@ function unusedDigits(arr) {
     .join("");
 }
 
-console.log(unusedDigits([2015, 8, 26]));
+console.log(unusedDigits(2015, 8, 26));
