@@ -34,5 +34,11 @@ function spacify(str) {
     .join("")
     .slice(0, -1);
 }
+//*2
+// function spacify(str) {
+//   return str.split("").join(" ");
+// }
+//*3
+// const spacify = (str) => [...str].join(" ");
 console.log(spacify("hello world"));
 
