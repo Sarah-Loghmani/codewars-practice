@@ -154,7 +154,26 @@ console.log(unusedDigits(2015, 8, 26));
 // -->
 // "####################################man!"
 function maskify(cc) {
-  
+  const length= cc.length - 4;
+  const lastFourCharacter= cc.slice(-4).split('')
+  for (let i=0; i<= length; i++) {
+      lastFourCharacter.unshift('#');
+  }
+  return lastFourCharacter.join('');
 }
+//*2
+// function maskify(cc) {
+//   return cc.slice(0, -4).replace(/./g, "#") + cc.slice(-4);
+// }
+//*3
+// function maskify(cc) {
+//   cc = cc.split("");
+//   for(var i = 0; i < cc.length - 4; i++){
+//     cc[i] = "#";
+// }
+
+// cc = cc.join("");
+// return cc
+// }
 
 console.log(maskify("4556364607935616"));
