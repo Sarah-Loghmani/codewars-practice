@@ -28,7 +28,11 @@ console.log(descendingOrder(0));
 // spacify("hello world") // returns "h e l l o   w o r l d"
 
 function spacify(str) {
-  return str.split("").map(ele => ele +' ').join(' ');
+  return str
+    .split("")
+    .map((ele) => ele + " ")
+    .join("")
+    .slice(0, -1);
 }
 console.log(spacify("hello world"));
 
