@@ -64,10 +64,12 @@ console.log(spacify("hello world"));
 
 function dontGiveMeFive(start, end) {
   const array= [start, end];
-  console.log(array);
-  while
-  if(start<end){
-    return array.push(start++);
+  
+  while (start<end) {
+    start++
+    array.push(start);
   }
+  return array.filter((ele , index)=> !index===0 && !index === -1 && !ele.toString().includes('5'))
+  
 }
 console.log(dontGiveMeFive(15,33));
