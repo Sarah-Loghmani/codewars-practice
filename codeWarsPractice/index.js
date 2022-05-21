@@ -44,7 +44,6 @@ function spacify(str) {
 // const spacify = ($) => $.replace(/./g, (e) => e + " ").trim();
 console.log(spacify("hello world"));
 
-
 // !  -----------------------------------------------
 // Don't give me five!
 // In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers with a 5 in it. The start and the end number are both inclusive!
@@ -63,13 +62,16 @@ console.log(spacify("hello world"));
 // I have also created other katas. Take a look if you enjoyed this kata!
 
 function dontGiveMeFive(start, end) {
-  const array= [start, end];
-  
-  while (start<end) {
-    start++
+  const array = [start, end];
+
+  while (start < end-1) {
+    start++;
+
     array.push(start);
   }
-  return array.filter((ele , index)=> !index===0 && !index === -1 && !ele.toString().includes('5'))
-  
+
+  return (
+    array.filter((ele) => !ele.toString().includes("5")).length
+  );
 }
-console.log(dontGiveMeFive(15,33));
+console.log(dontGiveMeFive(1,9));
