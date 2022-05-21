@@ -102,6 +102,9 @@ console.log(dontGiveMeFive(1,9));
 // solution(null); // should return []
 
 function solution(nums) {
-  return null ? []: nums.sort((a, b) => a -b);
+  return nums === null ? [] : nums.sort((a, b) => a -b);
 }
-console.log(solution(null));
+function solution(nums) {
+  return nums !== null ? nums.sort((a, b) => a - b) : [];
+}
+console.log(solution([1, 2, 10, 50, 5]));
