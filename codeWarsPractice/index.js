@@ -153,3 +153,8 @@ console.log(unusedDigits(2015, 8, 26));
 // "Nananananananananananananananana Batman!"
 // -->
 // "####################################man!"
+function maskify(cc) {
+  
+}
+
+console.log(maskify("4556364607935616"));
