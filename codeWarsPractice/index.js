@@ -63,5 +63,11 @@ console.log(spacify("hello world"));
 // I have also created other katas. Take a look if you enjoyed this kata!
 
 function dontGiveMeFive(start, end) {
-  return 0;
+  const array= [start, end];
+  console.log(array);
+  while
+  if(start<end){
+    return array.push(start++);
+  }
 }
+console.log(dontGiveMeFive(15,33));
