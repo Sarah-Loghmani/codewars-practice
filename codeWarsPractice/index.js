@@ -296,12 +296,13 @@ console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
 // pigIt('Hello world !');     // elloHay orldway !
 
 function pigIt(str) {
-  str
+  return str
     .split(" ") //array of words of str
     .map((a) => {
       let word = a.split("");
       const firstLetter = word.shift(); //remove the first letter and return to this variable
-      return word.push(firstLetter, "ay");
+       return word.push(firstLetter, "ay");
+    //  return firstLetter
     });
 }
 
