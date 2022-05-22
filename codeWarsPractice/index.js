@@ -326,3 +326,9 @@ console.log(pigIt("Pig latin is cool !"));
 // The input numbers are big.
 // The input is a string of only digits
 // The numbers are positives
+
+function add(a, b) {
+  return (Number(a) + Number(b)).toString(); // Fix me!
+}
+
+console.log(add('123', '321'));
