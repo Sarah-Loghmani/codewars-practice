@@ -296,41 +296,22 @@ function moveZeros(arr) {
 // pigIt('Hello world !');     // elloHay orldway !
 
 function pigIt(str) {
-
   return str
     .split(" ") //[ 'Pig', 'latin', 'is', 'cool', '!' ]
     .map((a) => {
-
-      if(a.match(/[a-z]/i)){
-        let word = a.split("");//['p','i','g']
+      if (a.match(/[a-z]/i)) {
+        let word = a.split(""); //['p','i','g']
         let firstLetter = word.shift(); //remove the first letter and return to this variable
 
         return word.join("").concat(firstLetter, "ay");
-      }else{
-        return a
+      } else {
+        return a;
       }
-
-        
-    
-    }).join(' ')
-    
+    })
+    .join(" ");
 }
 
-// function pigIt2(str){
-//   const punctuationMarks = `!"#$%&'()*+,-./:;<=>?@[\]^_\`{|}~]`;
-
-//   if(str[str.length-1].includes(punctuationMarks)){
-//     const lastIndex = str.pop()
-//     str.split(" ").map((a) => {
-//       let word = a.split("");//['p','i','g']
-//       let firstLetter = word.shift(); //remove the first letter and return to this variable
-//       return word.join(" ").concat(firstLetter, "ay", )
-//     })
-
-
-//   }
-
-// }
-
 console.log(pigIt("Pig latin is cool !"));
+// !------------------------------
+
 
