@@ -242,16 +242,15 @@ console.log(twoSum([1, 2, 3], 4));
 //     .reduce((a, b) => a + b, 0);
 // }
 
-const solution1 = (number)=>{
-    let result =0
+const solution1 = (number) => {
+  let result = 0;
   for (let i = 1; i < number; i++) {
-    if(i%5==0 || i%3==0){
-       result += i
-
+    if (i % 5 == 0 || i % 3 == 0) {
+      result += i;
     }
   }
-  return result
-}
+  return result;
+};
 
 console.log(solution1(10));
 
@@ -261,15 +260,14 @@ console.log(solution1(10));
 
 // moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
 
-
 function moveZeros(arr) {
   const result = arr.filter((a) => a !== 0);
-  const firstLength = arr.length
+  const firstLength = arr.length;
   const secondLength = result.length;
-  for(let i=1 ; i<=firstLength - secondLength; i++){
-      result.push(0)
+  for (let i = 1; i <= firstLength - secondLength; i++) {
+    result.push(0);
   }
-  return result
+  return result;
 }
 
 //*2
@@ -284,5 +282,28 @@ function moveZeros(arr) {
 //       })
 //     );
 // };
-
+//*3
+// var moveZeros = function (arr) {
+//   return [...arr.filter((n) => n !== 0), ...arr.filter((n) => n === 0)];
+// };
 console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+
+// !------------------------------
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+
+function pigIt(str) {
+   str
+    .split(" ")//array of words of str
+    .map((a) => {
+      let word = a.split("");
+      const firstLetter = word.shift();//remove the first letter and return to this variable
+      return word.push(firstLetter, "ay")
+    })
+    
+}
+
+console.log(pigIt("Pig latin is cool !"));
