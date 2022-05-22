@@ -215,25 +215,13 @@ console.log(getCount("abracadabra"));
 // twoSum [1, 2, 3] 4 === (0, 2)
 
 const twoSum = (numbers, target) => {
-  let firstNumber = 0;
-  let secondNumber = 0;
-  let sum = 0;
-  const result =[]
-  
-  // while(sum === target){
-    
-    for (let i = 0; i < numbers.length; i++) {
-      for (let j = i + 1; j < numbers.length; j++) {
-        firstNumber = numbers[i];
-        secondNumber = numbers[j];
-        sum = firstNumber + secondNumber
-        result=[firstNumber, secondNumber]
-  
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      if (numbers[i] + numbers[j] === target) {
+        return [numbers[i], numbers[j]];
       }
     }
-
-  // }
-  return result
+  }
 };
 
 console.log(twoSum([1, 2, 3], 4));
