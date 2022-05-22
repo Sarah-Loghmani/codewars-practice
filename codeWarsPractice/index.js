@@ -236,10 +236,21 @@ console.log(twoSum([1, 2, 3], 4));
 
 // Courtesy of projecteuler.net (Problem 1)
 
-function solution(numbers) {
-  numbers
-    .filter((a) => (!a < 0 && a % 3 === 0) || a % 5 === 0)
-   
+// function solution(...numbers) {
+//   return numbers
+//     .filter((a) => (a > 0 && a % 3 === 0) || a % 5 === 0)
+//     .reduce((a, b) => a + b, 0);
+// }
+
+const solution1 = (number)=>{
+    let result =0
+  for (let i = 1; i < number; i++) {
+    if(i%5==0 || i%3==0){
+       result += i
+
+    }
+  }
+  return result
 }
 
-console.log(solution([1, 2, 10, 50, 5, 15, 12]));
+console.log(solution1(10));
