@@ -220,19 +220,19 @@ const twoSum = (numbers, target) => {
   let sum = 0;
   const result =[]
   
-  while(sum === target){
+  // while(sum === target){
     
     for (let i = 0; i < numbers.length; i++) {
       for (let j = i + 1; j < numbers.length; j++) {
         firstNumber = numbers[i];
         secondNumber = numbers[j];
         sum = firstNumber + secondNumber
-        result.push(firstNumber, secondNumber)
+        result=[firstNumber, secondNumber]
   
       }
     }
 
-  }
+  // }
   return result
 };
 
