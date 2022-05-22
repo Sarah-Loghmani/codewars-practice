@@ -226,7 +226,6 @@ const twoSum = (numbers, target) => {
 
 console.log(twoSum([1, 2, 3], 4));
 
-
 // !------------------------------
 
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -238,16 +237,9 @@ console.log(twoSum([1, 2, 3], 4));
 // Courtesy of projecteuler.net (Problem 1)
 
 function solution(numbers) {
-  
-  numbers.filter(a=>{
-    if (!a < 0 ){
-     return a%3===0 || a%5===0
-
-    }else{
-      return a=0
-    }
-
-  }).reduce((a,b)=>a +b)
+  numbers
+    .filter((a) => (!a < 0 && a % 3 === 0) || a % 5 === 0)
+   
 }
 
 console.log(solution([1, 2, 10, 50, 5, 15, 12]));
