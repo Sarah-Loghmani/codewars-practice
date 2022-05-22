@@ -300,11 +300,17 @@ function pigIt(str) {
   return str
     .split(" ") //[ 'Pig', 'latin', 'is', 'cool', '!' ]
     .map((a) => {
-      let word = a.split("");//['p','i','g']
 
+      if(a.match(/[a-z]/i)){
+        let word = a.split("");//['p','i','g']
         let firstLetter = word.shift(); //remove the first letter and return to this variable
-        word.push(firstLetter, "ay");
-        return word.join("") ;
+
+        return word.join("").concat(firstLetter, "ay");
+      }else{
+        return a
+      }
+
+        
     
     }).join(' ')
     
