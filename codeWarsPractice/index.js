@@ -19,7 +19,7 @@ const descendingOrder = (num) => {
       );
 };
 
-console.log(descendingOrder(0));
+// console.log(descendingOrder(0));
 
 // !-------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ function spacify(str) {
 // const spacify = (str) => [...str].join(" ");
 //*4
 // const spacify = ($) => $.replace(/./g, (e) => e + " ").trim();
-console.log(spacify("hello world"));
+// console.log(spacify("hello world"));
 
 // !  -----------------------------------------------
 // Don't give me five!
@@ -89,7 +89,7 @@ function dontGiveMeFive(start, end) {
 //   }
 //   return res.length;
 // }
-console.log(dontGiveMeFive(1, 9));
+// console.log(dontGiveMeFive(1, 9));
 
 // !--------------------------------
 // Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
@@ -105,7 +105,7 @@ function solution(nums) {
 function solution(nums) {
   return nums !== null ? nums.sort((a, b) => a - b) : [];
 }
-console.log(solution([1, 2, 10, 50, 5]));
+// console.log(solution([1, 2, 10, 50, 5]));
 
 // !--------------------------------------------
 // Given a varying number of integer arguments, return the digits that are not present in any of them.
@@ -133,7 +133,7 @@ function unusedDigits(...arr) {
 //     .join("");
 // };
 
-console.log(unusedDigits(2015, 8, 26));
+// console.log(unusedDigits(2015, 8, 26));
 // !------------------------------
 
 // Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
@@ -176,7 +176,7 @@ function maskify(cc) {
 // return cc
 // }
 
-console.log(maskify("4556364607935616"));
+// console.log(maskify("4556364607935616"));
 
 // !---------------------------
 
@@ -200,7 +200,7 @@ function getCount(str) {
   return str.replace(/[^aeiou]/gi, "").length;
 }
 
-console.log(getCount("abracadabra"));
+// console.log(getCount("abracadabra"));
 
 // !------------------------------
 
@@ -224,7 +224,7 @@ const twoSum = (numbers, target) => {
   }
 };
 
-console.log(twoSum([1, 2, 3], 4));
+// console.log(twoSum([1, 2, 3], 4));
 
 // !------------------------------
 
@@ -252,7 +252,7 @@ const solution1 = (number) => {
   return result;
 };
 
-console.log(solution1(10));
+// console.log(solution1(10));
 
 // !------------------------------
 
@@ -286,7 +286,7 @@ function moveZeros(arr) {
 // var moveZeros = function (arr) {
 //   return [...arr.filter((n) => n !== 0), ...arr.filter((n) => n === 0)];
 // };
-console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
 
 // !------------------------------
 // Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
@@ -296,13 +296,20 @@ console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
 // pigIt('Hello world !');     // elloHay orldway !
 
 function pigIt(str) {
+  const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
   return str
     .split(" ") //array of words of str
     .map((a) => {
-      let word = a.split("");
-      const firstLetter = word.shift(); //remove the first letter and return to this variable
-       return word.push(firstLetter, "ay");
-    //  return firstLetter
+      let word = a.split(""); //[ 'Pig', 'latin', 'is', 'cool', '!' ]
+      let firstLetter = word.shift(); //remove the first letter and return to this variable
+      if (!word[-1].includes(regex)) {
+        word.push(firstLetter, "ay");
+        return word;
+      } else {
+         word.slice(0, -1)
+        // .push(firstLetter, "ay").concat(word.slice(-1));
+         return word;
+      }
     });
 }
 
