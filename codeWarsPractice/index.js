@@ -306,7 +306,8 @@ function pigIt(str) {
         word.push(firstLetter, "ay");
         return word.join("") ;
     
-    });
+    }).join(' ')
+    
 }
 
 // function pigIt2(str){
