@@ -49,3 +49,10 @@ function equal5(){
   return a%b;
 }
 console.log(equal1(),equal2(),equal3(),equal4(),equal5());
+
+
+function helloWorld() {
+  let str = "Hello World!";
+  console.log(str);
+}
+console.log(helloWorld());
