@@ -22,16 +22,3 @@ function banana(){
 }
 console.log(Dad(),Bee(), banana())
 
-//answer some questions if you finished works above
-function answer1(){
-  //the answer should be "yes" or "no"
-  return "";
-}
-function answer2(){
-  //the answer should be "yes" or "no"
-  return "";
-}
-function answer3(){
-  //the answer should be "yes" or "no"
-  return "";
-}
