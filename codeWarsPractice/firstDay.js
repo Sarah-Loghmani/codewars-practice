@@ -117,3 +117,12 @@ switch(n){
     //code block
                  //The last one does not need break
 }
+
+
+function howManydays(month){
+  var days;
+  switch (){
+  
+  }
+  return days;
+}
