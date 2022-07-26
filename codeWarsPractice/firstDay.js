@@ -85,3 +85,9 @@ function popElement(arr){
   arr.pop()
   return arr
 }
+
+
+function animal(obj) {
+  return `This ${obj.color} ${obj["name"]} has ${obj.legs} legs.`;
+}
+
