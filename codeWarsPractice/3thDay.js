@@ -33,24 +33,22 @@ function sum1_100() {
 // n, it's a number, how many times to pad the string.
 
 function padIt(str, n) {
-    let counter = 1
+  let counter = 1;
   do {
-    counter%2 !== 0 ? str = "*"+str : str = str+"*"
-    counter++
+    counter % 2 !== 0 ? (str = "*" + str) : (str = str + "*");
+    counter++;
   } while (counter <= n);
-  return str
+  return str;
 }
 console.log(padIt("a", 5));
 
-
-// for loop 
+// for loop
 function sum1_100() {
   for (var sum = 0, num = 1; num <= 100; num++) {
     sum += num;
   }
   return sum;
 }
-
 
 // Coding in function pickIt, function accept 1 parameter:arr, it's a number array, we need traverse arr by using for loop, if element is odd number, push it to array odd, if it's a even number, push it to array even.
 
@@ -59,8 +57,8 @@ function pickIt(arr) {
   var odd = [],
     even = [];
 
-  for(let i=0; i <= arr.length-1; i++) {
-    arr[i]%2===0 ? even.push(arr[i]) : odd.push(arr[i]) ;
+  for (let i = 0; i <= arr.length - 1; i++) {
+    arr[i] % 2 === 0 ? even.push(arr[i]) : odd.push(arr[i]);
   }
 
   return [odd, even];
@@ -86,7 +84,7 @@ function dontDisplayNegative(arr) {
   }
 }
 
-console.log(dontDisplayNegative([5,2,-6,5,-8,-5,6]));
+console.log(dontDisplayNegative([5, 2, -6, 5, -8, -5, 6]));
 
 // https://www.codewars.com/kata/5721c189cdd71194c1000b9b/train/javascript
 // Coding in function grabDoll. function accept 1 parameter:dolls. it's a string array, a list of some dolls.
@@ -100,8 +98,8 @@ console.log(dontDisplayNegative([5,2,-6,5,-8,-5,6]));
 function grabDoll(dolls) {
   var bag = [];
   for (let i = 0; i < dolls.length; i++) {
-    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll") 
-    bag.push(dolls[i])
+    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll")
+      bag.push(dolls[i]);
     else continue;
     if (bag.length === 3) break;
   }
@@ -110,4 +108,24 @@ function grabDoll(dolls) {
 }
 console.log(
   grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Snow white"])
+);
+
+// https://www.codewars.com/kata/5722b3f0bd5583cf44001000/train/javascript
+function giveMeFive(obj) {
+  let arr = [];
+
+  for (let key in obj) {
+      if (key.length === 5) {
+          arr.push(key);
+        }
+        if (obj[key].length === 5) {
+          arr.push(obj[key]);
+          
+        }
+    }
+  return arr;
+}
+
+console.log(
+  giveMeFive({ Ihave: "enough", money: "to", buy: "a", car: "model" })
 );
