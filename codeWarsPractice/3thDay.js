@@ -12,3 +12,18 @@ function sum1_100() {
   }
   return sum; //return the final cumulative value
 }
+
+// do--while
+function sum1_100() {
+  var sum = 0,
+    num = 1;
+  do {
+    sum += num;
+    num++;
+  } while (num <= 100);
+  return sum;
+}
+
+// !  Do not forget to change the value of the variable (for conditional expressions), otherwise it will turn into an infinite loop.
+
+// https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
