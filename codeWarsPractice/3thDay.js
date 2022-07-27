@@ -128,3 +128,45 @@ function giveMeFive(obj) {
 console.log(
   giveMeFive({ Ihave: "enough", money: "to", buy: "a", car: "model" })
 );
+
+// number object
+// var num = new Number(value);
+//  five attributes (or called constant):
+
+// MAX_VALUE: The maximum number that can be expressed in JS. Usage:Number.MAX_VALUE. Its approximate value is 1.7976931348623157e+308
+
+// MIN_VALUE: The minimum number that can be expressed in JS(Close to 0, but not negative). Usage:Number.MIN_VALUE. Its approximate value is 5e-324
+
+// NaN: Non numeric value. Abbreviations of "Not a Number". When some arithmetic operations (such as the square root of a negative number) or the result of the method are not numbers, return NaN. Usage:Number.NaN. It can be simplified and replaced with NaN.
+// https://www.codewars.com/kata/5722fd3ab7162a3a4500031f/train/javascript
+
+function whatNumberIsIt(n) {
+  let result;
+  n == Number.MAX_VALUE
+    ? (result = "Input number is Number.MAX_VALUE")
+    : n == Number.MIN_VALUE
+    ? (result = "Input number is Number.MIN_VALUE")
+    : isNaN(n)
+    ? (result = "Input number is Number.NaN")
+    : n <= Number.NEGATIVE_INFINITY
+    ? (result = "Input number is Number.NEGATIVE_INFINITY")
+    : n >= Number.POSITIVE_INFINITY
+    ? (result = "Input number is Number.POSITIVE_INFINITY")
+    : (result = `Input number is ${n}`);
+  return result;
+}
+
+function whatNumberIsIt(n) {
+  return n === Number.MAX_VALUE
+    ? "Input number is Number.MAX_VALUE"
+    : n === Number.MIN_VALUE
+    ? "Input number is Number.MIN_VALUE"
+    : isNaN(n)
+    ? "Input number is Number.NaN"
+    : n <= Number.NEGATIVE_INFINITY
+    ? "Input number is Number.NEGATIVE_INFINITY"
+    : n >= Number.POSITIVE_INFINITY
+    ? "Input number is Number.POSITIVE_INFINITY"
+    : `Input number is ${n}`;
+}
+console.log(whatNumberIsIt(1 / 0));
