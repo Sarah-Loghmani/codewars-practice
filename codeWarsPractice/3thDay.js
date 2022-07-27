@@ -99,9 +99,15 @@ console.log(dontDisplayNegative([5,2,-6,5,-8,-5,6]));
 
 function grabDoll(dolls) {
   var bag = [];
-  for(let i = 0; i <dolls.length; i++) {
-    dolls
+  for (let i = 0; i < dolls.length; i++) {
+    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll") 
+    bag.push(dolls[i])
+    else continue;
+    if (bag.length === 3) break;
   }
 
   return bag;
 }
+console.log(
+  grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Snow white"])
+);
