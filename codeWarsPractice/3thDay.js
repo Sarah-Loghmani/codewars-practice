@@ -77,3 +77,31 @@ function findFirstOddNumber(arr) {
   }
   return result;
 }
+
+// continue
+function dontDisplayNegative(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) continue;
+    console.log(arr[i]);
+  }
+}
+
+console.log(dontDisplayNegative([5,2,-6,5,-8,-5,6]));
+
+// https://www.codewars.com/kata/5721c189cdd71194c1000b9b/train/javascript
+// Coding in function grabDoll. function accept 1 parameter:dolls. it's a string array, a list of some dolls.
+
+// You need traverse dolls by using for loop. If element is "Hello Kitty" or "Barbie doll", you should push it to a bag(bag is an array, I've defined in the function); if it's other strings, we should use continue skip it.
+
+// When the bag has three element, bag is full. You should use break jump out the loop; If bag is not full, you should traverse dolls until the last element.
+
+// Return the bag after for loop finished.
+
+function grabDoll(dolls) {
+  var bag = [];
+  for(let i = 0; i <dolls.length; i++) {
+    dolls
+  }
+
+  return bag;
+}
