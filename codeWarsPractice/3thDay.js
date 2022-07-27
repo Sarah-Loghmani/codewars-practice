@@ -27,3 +27,7 @@ function sum1_100() {
 // !  Do not forget to change the value of the variable (for conditional expressions), otherwise it will turn into an infinite loop.
 
 // https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
+
+// Coding in function padIt, function accept 2 parameters:
+// str, it's a string representing the string to pad, we need pad some "*" at leftside or rightside of str
+// n, it's a number, how many times to pad the string.
