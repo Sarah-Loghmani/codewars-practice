@@ -31,3 +31,13 @@ function sum1_100() {
 // Coding in function padIt, function accept 2 parameters:
 // str, it's a string representing the string to pad, we need pad some "*" at leftside or rightside of str
 // n, it's a number, how many times to pad the string.
+
+function padIt(str, n) {
+    let counter = 1
+  do {
+    counter%2 !== 0 ? str = "*"+str : str = str+"*"
+    counter++
+  } while (counter <= n);
+  return str
+}
+console.log(padIt("a", 5));
