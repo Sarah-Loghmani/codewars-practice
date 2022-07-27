@@ -41,3 +41,23 @@ function padIt(str, n) {
   return str
 }
 console.log(padIt("a", 5));
+
+
+// for loop 
+function sum1_100() {
+  for (var sum = 0, num = 1; num <= 100; num++) {
+    sum += num;
+  }
+  return sum;
+}
+
+
+// Coding in function pickIt, function accept 1 parameter:arr, it's a number array, we need traverse arr by using for loop, if element is odd number, push it to array odd, if it's a even number, push it to array even.
+
+function pickIt(arr) {
+  var odd = [],
+    even = [];
+  //coding here
+
+  return [odd, even];
+}
