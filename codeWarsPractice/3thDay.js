@@ -65,3 +65,15 @@ function pickIt(arr) {
 
   return [odd, even];
 }
+
+// break
+function findFirstOddNumber(arr) {
+  var result;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 1) {
+      result = arr[i];
+      break;
+    }
+  }
+  return result;
+}
