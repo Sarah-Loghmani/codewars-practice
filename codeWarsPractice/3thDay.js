@@ -170,3 +170,15 @@ function whatNumberIsIt(n) {
     : `Input number is ${n}`;
 }
 console.log(whatNumberIsIt(1 / 0));
+
+
+function colorOf(r, g, b) {
+  let r2 = r.toString(16);
+  console.log(r2);
+  let g2 = g.toString(16);
+  console.log(g2);
+  let b2 = b.toString(16);
+  console.log(b2);
+  return `#${r2}${g2}${b2}`;
+}
+console.log(colorOf(255,0,0));
